@@ -248,6 +248,7 @@ const ForgotPassword = ({
             setDidSendCode(true);
           })
           .catch((error) => {
+            console.log("Got to this step");
             console.error(error);
             if (error instanceof ConvexError) {
               setError(error.message);
